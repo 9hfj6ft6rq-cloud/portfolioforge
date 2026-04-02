@@ -120,12 +120,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <Image
-              src="https://placehold.co/540x400/7C3AED/ffffff?text=Your+Photo+Here"
+              src="/portfolio-preview.svg"
               alt="Student using PortfolioForge"
               width={540}
               height={400}
               className="rounded-2xl shadow-xl w-full object-cover"
-              unoptimized
             />
           </div>
           <div>

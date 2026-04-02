@@ -1,0 +1,113 @@
+<svg width="540" height="400" viewBox="0 0 540 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="540" height="400" rx="16" fill="#0F172A"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="80" x2="540" y2="80" stroke="#1E293B" stroke-width="1"/>
+  <line x1="160" y1="80" x2="160" y2="400" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="160" height="400" rx="16" fill="#1E293B"/>
+  <rect x="140" y="0" width="20" height="400" fill="#1E293B"/>
+
+  <!-- Logo in sidebar -->
+  <rect x="20" y="20" width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+  <text x="36" y="41" font-family="Arial, sans-serif" font-weight="bold" font-size="13" fill="white" text-anchor="middle">PF</text>
+  <text x="68" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="white">Portfolio</text>
+  <text x="68" y="48" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#818CF8">Forge</text>
+
+  <!-- Sidebar nav items -->
+  <rect x="12" y="76" width="136" height="36" rx="8" fill="#4F46E5"/>
+  <circle cx="32" cy="94" r="6" fill="#818CF8"/>
+  <rect x="46" y="90" width="60" height="8" rx="4" fill="white"/>
+
+  <circle cx="32" cy="130" r="6" fill="#334155"/>
+  <rect x="46" y="126" width="50" height="8" rx="4" fill="#475569"/>
+
+  <circle cx="32" cy="162" r="6" fill="#334155"/>
+  <rect x="46" y="158" width="65" height="8" rx="4" fill="#475569"/>
+
+  <circle cx="32" cy="194" r="6" fill="#334155"/>
+  <rect x="46" y="190" width="45" height="8" rx="4" fill="#475569"/>
+
+  <!-- Sidebar bottom badge -->
+  <rect x="12" y="340" width="136" height="48" rx="10" fill="#312E81"/>
+  <rect x="20" y="348" width="16" height="16" rx="4" fill="#4F46E5"/>
+  <text x="28" y="359" font-family="Arial, sans-serif" font-weight="bold" font-size="8" fill="white" text-anchor="middle">AI</text>
+  <rect x="44" y="350" width="70" height="6" rx="3" fill="#818CF8"/>
+  <rect x="44" y="362" width="90" height="6" rx="3" fill="#4338CA"/>
+
+  <!-- Main header bar -->
+  <rect x="160" y="0" width="380" height="80" fill="#0F172A"/>
+  <rect x="180" y="28" width="120" height="10" rx="5" fill="#1E293B"/>
+  <rect x="180" y="44" width="80" height="8" rx="4" fill="#1E293B"/>
+
+  <!-- AI Processing badge -->
+  <rect x="400" y="24" width="120" height="32" rx="16" fill="#4F46E5"/>
+  <circle cx="418" cy="40" r="6" fill="#818CF8"/>
+  <rect x="430" y="36" width="60" height="8" rx="4" fill="white"/>
+
+  <!-- Portfolio card 1 -->
+  <rect x="176" y="96" width="168" height="140" rx="12" fill="#1E293B"/>
+  <rect x="176" y="96" width="168" height="60" rx="12" fill="url(#card1Grad)"/>
+  <rect x="176" y="132" width="168" height="24" fill="url(#card1Grad)"/>
+  <text x="260" y="132" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="white" text-anchor="middle" opacity="0.3">{ }</text>
+  <rect x="192" y="168" width="100" height="8" rx="4" fill="#334155"/>
+  <rect x="192" y="182" width="136" height="6" rx="3" fill="#1E3A5F"/>
+  <rect x="192" y="194" width="110" height="6" rx="3" fill="#1E3A5F"/>
+  <rect x="192" y="210" width="60" height="20" rx="10" fill="#312E81"/>
+  <rect x="192" y="211" width="60" height="18" rx="9" fill="#4F46E5" opacity="0.7"/>
+  <rect x="260" y="211" width="50" height="18" rx="9" fill="#1E3A5F"/>
+
+  <!-- Portfolio card 2 -->
+  <rect x="356" y="96" width="168" height="140" rx="12" fill="#1E293B"/>
+  <rect x="356" y="96" width="168" height="60" rx="12" fill="url(#card2Grad)"/>
+  <rect x="356" y="132" width="168" height="24" fill="url(#card2Grad)"/>
+  <text x="440" y="132" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="white" text-anchor="middle" opacity="0.3">📊</text>
+  <rect x="372" y="168" width="100" height="8" rx="4" fill="#334155"/>
+  <rect x="372" y="182" width="136" height="6" rx="3" fill="#1E3A5F"/>
+  <rect x="372" y="194" width="110" height="6" rx="3" fill="#1E3A5F"/>
+  <rect x="372" y="211" width="60" height="18" rx="9" fill="#065F46" opacity="0.8"/>
+  <rect x="440" y="211" width="50" height="18" rx="9" fill="#1E3A5F"/>
+
+  <!-- Skills section -->
+  <rect x="176" y="252" width="348" height="60" rx="12" fill="#1E293B"/>
+  <rect x="192" y="264" width="70" height="8" rx="4" fill="#475569"/>
+  <rect x="192" y="280" width="50" height="20" rx="10" fill="#312E81"/>
+  <rect x="248" y="280" width="64" height="20" rx="10" fill="#1E3A5F"/>
+  <rect x="318" y="280" width="56" height="20" rx="10" fill="#312E81"/>
+  <rect x="380" y="280" width="72" height="20" rx="10" fill="#1E3A5F"/>
+  <text x="217" y="294" font-family="Arial, sans-serif" font-size="8" fill="#818CF8" text-anchor="middle">Python</text>
+  <text x="280" y="294" font-family="Arial, sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Leadership</text>
+  <text x="346" y="294" font-family="Arial, sans-serif" font-size="8" fill="#818CF8" text-anchor="middle">Research</text>
+  <text x="416" y="294" font-family="Arial, sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Presentations</text>
+
+  <!-- Resume generate bar -->
+  <rect x="176" y="328" width="228" height="56" rx="12" fill="#1E293B"/>
+  <rect x="192" y="340" width="80" height="8" rx="4" fill="#475569"/>
+  <rect x="192" y="356" width="196" height="18" rx="9" fill="#4F46E5"/>
+  <text x="290" y="369" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">Generate Resume ✨</text>
+
+  <!-- AI summary box -->
+  <rect x="416" y="328" width="108" height="56" rx="12" fill="#312E81"/>
+  <rect x="428" y="340" width="60" height="6" rx="3" fill="#818CF8"/>
+  <rect x="428" y="352" width="80" height="5" rx="2.5" fill="#4338CA"/>
+  <rect x="428" y="362" width="70" height="5" rx="2.5" fill="#4338CA"/>
+  <rect x="428" y="372" width="50" height="5" rx="2.5" fill="#4338CA"/>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="card1Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="card2Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0891B2"/>
+      <stop offset="100%" stop-color="#1E3A5F"/>
+    </linearGradient>
+  </defs>
+</svg>

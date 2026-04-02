@@ -85,12 +85,11 @@ export default function AboutPage() {
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
           <Image
-            src="https://placehold.co/540x400/1E293B/ffffff?text=Your+Photo"
-            alt="Founder photo 3"
+            src="/ai-flow-preview.svg"
+            alt="AI flow preview"
             width={540}
             height={400}
             className="rounded-2xl shadow-xl w-full object-cover"
-            unoptimized
           />
           <div>
             <span className="text-indigo-600 font-semibold text-sm uppercase tracking-widest">
