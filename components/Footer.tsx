@@ -19,6 +19,7 @@ export default function Footer() {
             <Link href="/about" className="hover:text-white transition-colors">About</Link>
             <Link href="/how-it-works" className="hover:text-white transition-colors">How It Works</Link>
             <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+            <Link href="/signup" className="hover:text-white transition-colors">Sign Up</Link>
           </div>
 
           <p className="text-sm">© 2025 PortfolioForge. All rights reserved.</p>

@@ -14,6 +14,10 @@ export default function Navbar() {
     { href: '/contact', label: 'Contact' },
   ]
 
+  const appLinks = [
+    { href: '/login', label: 'Log In' },
+  ]
+
   return (
     <nav className="bg-white border-b border-slate-100 sticky top-0 z-50 shadow-sm">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -42,11 +46,24 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          {appLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`text-sm font-medium transition-colors ${
+                pathname === link.href
+                  ? 'text-indigo-600'
+                  : 'text-slate-600 hover:text-indigo-600'
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link
-            href="/#waitlist"
+            href="/signup"
             className="bg-indigo-600 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-indigo-700 transition-colors"
           >
-            Join Waitlist
+            Get Started
           </Link>
         </div>
 
@@ -81,11 +98,18 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/#waitlist"
+            href="/login"
+            onClick={() => setMenuOpen(false)}
+            className={`text-sm font-medium ${pathname === '/login' ? 'text-indigo-600' : 'text-slate-600'}`}
+          >
+            Log In
+          </Link>
+          <Link
+            href="/signup"
             onClick={() => setMenuOpen(false)}
             className="bg-indigo-600 text-white text-sm font-semibold px-5 py-2 rounded-full text-center hover:bg-indigo-700 transition-colors"
           >
-            Join Waitlist
+            Get Started
           </Link>
         </div>
       )}

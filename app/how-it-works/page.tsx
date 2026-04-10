@@ -1,6 +1,23 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Link from 'next/link'
+import { motion, useInView } from 'framer-motion'
+
+function FadeIn({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-80px' })
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
 
 const steps = [
   {
@@ -64,10 +81,12 @@ export default function HowItWorksPage() {
     <div>
       {/* Header */}
       <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white py-20 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">How It Works</h1>
-        <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-          From raw college work to job-ready portfolio in four simple steps — find the right jobs or confirm you're a fit for one you love.
-        </p>
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">How It Works</h1>
+          <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+            From raw college work to job-ready portfolio in four simple steps — find the right jobs or confirm you're a fit for one you love.
+          </p>
+        </motion.div>
       </section>
 
       {/* Step-by-step visual */}
@@ -178,38 +197,42 @@ export default function HowItWorksPage() {
 
           <div className="grid md:grid-cols-2 gap-8 text-left">
             {/* Job Recommendations */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-indigo-100 shadow-sm">
-              <div className="text-4xl mb-4">🔍</div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">Not Sure What Jobs Fit You?</h3>
-              <p className="text-slate-600 leading-relaxed mb-4">
-                Upload your work and let PortfolioForge analyze your skills, experience, and achievements. Our AI will recommend job roles that align with what you've actually done — not just your major.
-              </p>
-              <ul className="flex flex-col gap-2">
-                {['AI identifies your strengths from real work', 'Suggests roles that match your skill set', 'Explains why each job is a good fit for you'].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
-                    <span className="text-indigo-500 font-bold mt-0.5">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <FadeIn delay={0.1}>
+              <div className="bg-white rounded-2xl p-8 border-2 border-indigo-100 shadow-sm h-full">
+                <div className="text-4xl mb-4">🔍</div>
+                <h3 className="text-xl font-bold text-slate-800 mb-3">Not Sure What Jobs Fit You?</h3>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  Upload your work and let PortfolioForge analyze your skills, experience, and achievements. Our AI will recommend job roles that align with what you've actually done — not just your major.
+                </p>
+                <ul className="flex flex-col gap-2">
+                  {['AI identifies your strengths from real work', 'Suggests roles that match your skill set', 'Explains why each job is a good fit for you'].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
+                      <span className="text-indigo-500 font-bold mt-0.5">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
 
             {/* Job Fit Check */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-violet-100 shadow-sm">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">Already Have a Job in Mind?</h3>
-              <p className="text-slate-600 leading-relaxed mb-4">
-                Paste in a job description and PortfolioForge will compare it against your uploaded work to show you exactly how well you match — and how to present yourself to close any gaps.
-              </p>
-              <ul className="flex flex-col gap-2">
-                {['See your match score against the job requirements', 'Know which of your experiences are most relevant', 'Get a tailored resume and cover letter for that role'].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
-                    <span className="text-violet-500 font-bold mt-0.5">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <FadeIn delay={0.2}>
+              <div className="bg-white rounded-2xl p-8 border-2 border-violet-100 shadow-sm h-full">
+                <div className="text-4xl mb-4">🎯</div>
+                <h3 className="text-xl font-bold text-slate-800 mb-3">Already Have a Job in Mind?</h3>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  Paste in a job description and PortfolioForge will compare it against your uploaded work to show you exactly how well you match — and how to present yourself to close any gaps.
+                </p>
+                <ul className="flex flex-col gap-2">
+                  {['See your match score against the job requirements', 'Know which of your experiences are most relevant', 'Get a tailored resume and cover letter for that role'].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
+                      <span className="text-violet-500 font-bold mt-0.5">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -264,14 +287,16 @@ export default function HowItWorksPage() {
 
       {/* CTA */}
       <section className="bg-indigo-600 py-16 px-6 text-center text-white">
-        <h2 className="text-3xl font-bold mb-4">Ready to Try It?</h2>
-        <p className="text-indigo-200 mb-8 text-lg">Get early access when we launch.</p>
-        <Link
-          href="/#waitlist"
-          className="bg-white text-indigo-600 font-bold px-10 py-4 rounded-full hover:bg-indigo-50 transition-colors inline-block"
-        >
-          Join the Waitlist
-        </Link>
+        <FadeIn>
+          <h2 className="text-3xl font-bold mb-4">Ready to Try It?</h2>
+          <p className="text-indigo-200 mb-8 text-lg">Create your free account and get started in minutes.</p>
+          <Link
+            href="/signup"
+            className="bg-white text-indigo-600 font-bold px-10 py-4 rounded-full hover:bg-indigo-50 transition-colors inline-block"
+          >
+            Get Started Free
+          </Link>
+        </FadeIn>
       </section>
     </div>
   )
