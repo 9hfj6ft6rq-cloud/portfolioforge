@@ -66,7 +66,7 @@ export default function HowItWorksPage() {
       <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4">How It Works</h1>
         <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-          From raw college work to job-ready portfolio in four simple steps.
+          From raw college work to job-ready portfolio in four simple steps — find the right jobs or confirm you're a fit for one you love.
         </p>
       </section>
 
@@ -168,6 +168,52 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
+      {/* Two Ways to Use PortfolioForge */}
+      <section className="py-20 px-6 bg-slate-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-slate-800 mb-4">Two Ways PortfolioForge Works for You</h2>
+          <p className="text-slate-500 mb-12 text-lg">
+            Whether you know what you want or you're still figuring it out — we've got you covered.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 text-left">
+            {/* Job Recommendations */}
+            <div className="bg-white rounded-2xl p-8 border-2 border-indigo-100 shadow-sm">
+              <div className="text-4xl mb-4">🔍</div>
+              <h3 className="text-xl font-bold text-slate-800 mb-3">Not Sure What Jobs Fit You?</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Upload your work and let PortfolioForge analyze your skills, experience, and achievements. Our AI will recommend job roles that align with what you've actually done — not just your major.
+              </p>
+              <ul className="flex flex-col gap-2">
+                {['AI identifies your strengths from real work', 'Suggests roles that match your skill set', 'Explains why each job is a good fit for you'].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
+                    <span className="text-indigo-500 font-bold mt-0.5">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Job Fit Check */}
+            <div className="bg-white rounded-2xl p-8 border-2 border-violet-100 shadow-sm">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-slate-800 mb-3">Already Have a Job in Mind?</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Paste in a job description and PortfolioForge will compare it against your uploaded work to show you exactly how well you match — and how to present yourself to close any gaps.
+              </p>
+              <ul className="flex flex-col gap-2">
+                {['See your match score against the job requirements', 'Know which of your experiences are most relevant', 'Get a tailored resume and cover letter for that role'].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
+                    <span className="text-violet-500 font-bold mt-0.5">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why it beats the competition */}
       <section className="py-20 px-6 bg-slate-50">
         <div className="max-w-4xl mx-auto text-center">
@@ -188,6 +234,8 @@ export default function HowItWorksPage() {
               <tbody>
                 {[
                   ['Generates content from your uploads', false, true],
+                  ['Recommends jobs that fit your skills', false, true],
+                  ['Shows how well you match a specific job', false, true],
                   ['Tailors resume per job description', false, true],
                   ['Builds full portfolio page', false, true],
                   ['Gives writing tips & templates', true, true],

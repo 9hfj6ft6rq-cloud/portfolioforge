@@ -8,7 +8,7 @@ export default function AboutPage() {
       <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4">About PortfolioForge</h1>
         <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-          We believe every college graduate deserves to show up to the job market ready — regardless of their major.
+          A tool born from the job search struggle — built by a college student who just wanted a simpler way.
         </p>
       </section>
 
@@ -17,24 +17,26 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
           <div className="flex flex-col gap-6">
             <span className="text-indigo-600 font-semibold text-sm uppercase tracking-widest">
-              Our Story
+              The Story Behind It
             </span>
             <h2 className="text-3xl font-bold text-slate-800 leading-tight">
-              A Problem Every College Senior Faces
+              Built by a College Student, for College Students
             </h2>
             <p className="text-slate-500 leading-relaxed">
-              Four years of hard work — group projects, club leadership, research papers,
-              presentations — and most students don&apos;t know how to turn any of it into
-              something employers actually want to see.
+              I&apos;m currently in college and actively going through the job search myself. I
+              know firsthand how overwhelming it feels — you&apos;ve done the work, put in the
+              hours, and built real experience, but when it comes time to actually apply, turning
+              all of that into something polished and professional feels like a whole separate job.
             </p>
             <p className="text-slate-500 leading-relaxed">
-              Other resume builders tell you <em>what</em> to do. We thought that wasn&apos;t
-              good enough. So we built PortfolioForge — an AI tool that does the work for you.
-              Upload what you have. We&apos;ll handle the rest.
+              I didn&apos;t want to spend hours wrestling with resume templates or guessing which
+              of my projects were worth including. I wanted something that could just take what I
+              had and make it work — without the stress. So I built PortfolioForge.
             </p>
             <p className="text-slate-500 leading-relaxed">
-              Our mission is simple: level the playing field for every college senior, especially
-              those in majors where portfolio-building isn&apos;t taught.
+              What started as something I made for myself became something I realized every college
+              student deserves access to. If you&apos;re in the same boat — grinding through
+              applications and wishing the process was simpler — this was made for you.
             </p>
           </div>
 
@@ -72,9 +74,10 @@ export default function AboutPage() {
 
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 aspect-video">
             <iframe
-              src="https://drive.google.com/file/d/1rIyHOV_Brm-mVS-ffcKRDqpoVJK8x2vz/preview"
+              src="https://www.youtube.com/embed/W2hLCC22i1Y"
               className="w-full h-full"
-              allow="autoplay"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
               title="PortfolioForge Pitch Video"
             />
           </div>
